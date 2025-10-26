@@ -24,7 +24,9 @@ import { rehypeMermaid } from "./src/plugins/rehype-mermaid.mjs";
 import { parseDirectiveNode } from "./src/plugins/remark-directive-rehype.js";
 import { remarkExcerpt } from "./src/plugins/remark-excerpt.js";
 import { remarkMermaid } from "./src/plugins/remark-mermaid.js";
+import remarkImageWidth from './src/plugins/remark-image-width.js'
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
+import remarkImageCaption from "./src/plugins/remark-image-caption.ts";
 // https://astro.build/config
 export default defineConfig({
 	site: "https://mizuki.mysqil.com/",
@@ -121,9 +123,16 @@ export default defineConfig({
 			remarkExcerpt,
 			remarkGithubAdmonitionsToDirectives,
 			remarkDirective,
+			[
+        		remarkImageCaption,
+        		{
+          			className: 'image-caption',
+        		},
+      		],
 			remarkSectionize,
 			parseDirectiveNode,
 			remarkMermaid,
+			remarkImageWidth,
 		],
 		rehypePlugins: [
 			rehypeKatex,
