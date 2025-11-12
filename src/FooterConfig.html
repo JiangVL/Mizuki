@@ -1,1 +1,59 @@
-这里是HTML注入示例，你可以在这个文件中添加自定义的HTML内容
+<p>
+  网站已稳定运行：<span id="runtime">正在加载...</span>
+</p>
+
+<script>
+  // 使用立即调用函数表达式(IIFE)避免变量污染全局作用域
+  (function() {
+      // 设置网站的开始日期
+      // 格式：'YYYY/MM/DD HH:MM:SS'
+      const siteStartDate = new Date('2025/11/01 00:00:00'); 
+      
+      // 获取显示运行时间的元素
+      const runtimeElement = document.getElementById('runtime');
+
+      function updateRuntime() {
+          const now = new Date();
+          // 计算时间差 (毫秒)
+          const diff = now - siteStartDate;
+
+          // 检查开始日期是否有效且在过去
+          if (diff < 0) {
+              runtimeElement.innerHTML = '网站启动日期尚未到达！';
+              return;
+          }
+
+          // 转换时间差为天、时、分、秒
+          let totalSeconds = Math.floor(diff / 1000);
+          
+          // 秒
+          const seconds = totalSeconds % 60;
+          totalSeconds = Math.floor(totalSeconds / 60);
+
+          // 分钟
+          const minutes = totalSeconds % 60;
+          totalSeconds = Math.floor(totalSeconds / 60);
+
+          // 小时
+          const hours = totalSeconds % 24;
+          
+          // 天
+          const days = Math.floor(totalSeconds / 24);
+
+          // 格式化输出 (确保数字为两位数)
+          const formatNumber = (num) => String(num).padStart(2, '0');
+
+          const runtimeString = 
+              `${days} 天 ${formatNumber(hours)} 小时 ${formatNumber(minutes)} 分 ${formatNumber(seconds)} 秒`;
+
+          // 更新页脚中的显示内容
+          runtimeElement.innerHTML = runtimeString;
+      }
+
+      // 首次调用，立即显示时间
+      updateRuntime();
+
+      // 每隔 1 秒更新一次时间，实现“动态”效果
+      setInterval(updateRuntime, 1000);
+  })();
+</script>
