@@ -40,8 +40,19 @@ if (isLocal) {
 		console.error(
 			`\n[ERROR] Image file not found: ${normalizedPath.replace("../../", "src/")}`,
 		);
+		// 使用debug图片作为替代
+		try {
+			const debugFile = files["../../public/sakura.png"];
+			if (debugFile) {
+				img = await debugFile();
+				console.log("Using debug image as fallback");
+			}
+		} catch (e) {
+			console.error("Failed to load debug image", e);
+		}
+	} else {
+		img = await file();
 	}
-	img = await file();
 }
 
 const imageClass = "w-full h-full object-cover";

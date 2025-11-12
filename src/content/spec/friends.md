@@ -3,9 +3,9 @@
 ### 本站信息
   ```
     {
-            title: "FuJieMel",
+            title: "Saname",
             imgurl: "https://ceshi.395718.xyz/assets/home/home.png",
-            desc: "不知写啥",
+            desc: "写啥好呢！写啥好呢！写啥好呢！",
             siteurl: "https://ceshi.395718.xyz/",
             tags: ["Framework"],
 	}
@@ -26,7 +26,7 @@
 #### 邮件标题
 - 友链申请 - [您的站点名称]
 #### 邮件地址
-- fujiemel.outlook.com
+- fujiemel@outlook.com
 ### 注意事项
 - 互换原则：请先将本站添加到您的友链页面，我会在确认后添加您的友链
 - 链接维护：如发现友链网站长期无法访问或内容违规，将会移除友链
