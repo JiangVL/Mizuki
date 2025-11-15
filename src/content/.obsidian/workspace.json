@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/about-website.md",
+                "file": "posts/luoyan-three.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "about-website"
+              "title": "luoyan-three"
             }
           }
         ]
@@ -170,9 +170,14 @@
   },
   "active": "5ae2fd6343ef2536",
   "lastOpenFiles": [
+    "IMG_20250825_132812.webp",
+    "posts/luoyan-three.md",
+    "posts/about-website.md",
+    "posts/未命名.md",
+    "posts/测试.md",
+    "posts/ceshi.md",
     "spec/about.md",
     "spec/friends.md",
-    "posts/about-website.md",
     "posts/draft.md",
     "posts/关于本站.md",
     "posts/guide/cover.jpeg",

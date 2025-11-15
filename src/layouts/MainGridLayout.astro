@@ -535,6 +535,7 @@ const transparentClass = shouldEnableTransparency
     animation: fadeInUp 1s ease-out 0.3s both;
     min-height: 1.5em; /* 确保副标题容器有最小高度 */
     line-height: 1.2; /* 确保一致的行高 */
+    font-size: 1.25rem; /* 增大打字机字体大小 */
 }
 
 @keyframes fadeInUp {
@@ -749,6 +750,11 @@ body.no-banner-mode .absolute.w-full.z-30 {
         margin-bottom: 0 !important;
         width: 75% !important;
         text-align: center !important; /* 确保文字居中 */
+    }
+    
+    /* 桌面端打字机字体优化 */
+    .banner-subtitle {
+        font-size: 2rem !important; /* 桌面端增大打字机字体大小 */
     }
     
     /* 桌面端图片容器优化 */
