@@ -3,11 +3,11 @@
 ### 本站信息
   ```
     {
-            title: "Saname",
-            imgurl: "https://ceshi.395718.xyz/assets/home/home.png",
-            desc: "写啥好呢！写啥好呢！写啥好呢！",
-            siteurl: "https://ceshi.395718.xyz/",
-            tags: ["Framework"],
+            title: "晳粊",
+            imgurl: "https://www.zhbi.top/_astro/avatar.CyWaYkSr_qqU2U.webp",
+            desc: "人生如登高，山川日月在目，而晳粊之光，独照我心",
+            siteurl: "www.zhbi.top",
+            tags: ["Friends"],
 	}
   ```
 

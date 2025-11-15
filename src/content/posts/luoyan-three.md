@@ -19,7 +19,8 @@ lang: zh-CN
 农村人进城了！
 <img src="https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/go-luoyang.webp"/>
 ## 第0天
-出火车站，先去了火车站右前方宝龙大厦，在美团上订了个青旅40元一晚，我也是第一次住青旅(临栖·临时栖息·青年旅舍)个人感觉的话环境还可以，挺干净的，四人间，有空调洗浴洗衣机不限量的矿泉水，洗漱用品，门口就是公交车站，去哪都挺方便。
+出火车站已经临近傍晚，先去了火车站右前方宝龙大厦，在美团上订了个青旅40元一晚，我也是第一次住青旅(临栖·临时栖息·青年旅舍)个人感觉的话环境还可以，挺干净的，四人间，有空调洗浴洗衣机不限量的矿泉水，洗漱用品，门口就是公交车站，去哪都挺方便。
+**景点**：应天门 明堂天堂
 <img src="https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoyang-20250825_175918.jpg"/>
 翻翻旅游攻略，来洛阳的第一站去了应天门，骑小黄车去的有点远，主要看看沿途有啥好玩的。  
 正常还是坐公交方便，洛阳公交车，不管有没有人每站都停一下，挺惊讶的。  
@@ -50,3 +51,58 @@ lang: zh-CN
 <img src="https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoyang-20250825_203011248.webp"/>
 <img src="https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoyang-20250825_205615720.webp"/>
 <img src="https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoyang-20250825_210512517.webp"/>
+## 第一天
+**景点**：白马寺 洛阳古墓博物馆 龙门石窟  
+三个大型景点真累，不建议模仿  
+早上找了一家早餐店吃了胡辣汤和水煎包，胡辣汤确实好喝。  
+乘坐公交车前往“中国第一古刹”白马寺  
+### 白马寺
+
+下公交车后还需要走500米左右才能到白马寺正门口，白马寺我是挺推荐来玩的，全票35￥，半价17.5￥，逛的地方也多。  
+要是条件允许还是建议报个团听人家讲解，自己看其实没啥感觉，那种历史的沧桑感
+![](https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoyang-20250826_095643408.webp)
+进门后就是一个大香炉  
+![](https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoyang-20250826_095802921.webp)右手边就是钟楼，可以免费拿三根香  
+![](https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoyang-20250826_095842293.webp)
+往后走就是一大片菜地，能听到鸟叫声此起彼伏，还挺好听  
+![](https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoyang-20250826_101132747.webp)
+左手边有卖祈福手串的，十八籽68￥还是88￥来着记不清了，我是穷逼，买不起  
+往里走有个小“屋子”就那洞口，里头就一些画。  
+不远处有个挺有名的地方“止语茶社” 就是不让讲话，一个喝茶休息的地方  
+![](https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoyang_20250826_104332585.webp)
+
+
+喝完茶，往右走是 **国际佛殿区（中印缅泰四国馆）**
+![](https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoyang-20250826_105345391.webp)![](https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoyang-20250826_110121210.webp)
+![](https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoyang-20250826_110923748.webp)都还可以，从屋子上的裂痕可以看出，有点年代  
+还在白马寺看到雨姐48码大脚了(如有冒犯请与我联系删除)  
+![](https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoyang-20250826_110335412.webp)
+文笔有限，**齐云塔院（释迦舍利塔）** **狄仁杰墓（唐代名相长眠地）** 不描述了。  
+~~没空这里可以不看，有点无聊~~
+### 洛阳古墓博物馆
+原本是想去洛阳博物馆的，奈何没预约上  
+乘坐专程公交车前往，下车离门口好远，两边都有小吃摊贩，可以顺手吃个午饭  
+![](https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoayng-20250826_145223187.webp)
+博物馆的景点都在地下，要钻地道，有点阴冷  
+<img src="https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoyang-20250826_150119576.webp"/>
+<img src="https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoyang-20250826_152145331.webp"/>
+没啥好说的历史悠久，没报团，看过了就看过了，我也讲不出个花了  
+这里网上出名一点的就是手中无剑，影子里有剑，其实就是错位  
+回去补觉  
+### 龙门石窟
+乘坐地铁前往，其实公交车更方便，主要是还没坐过洛阳的地铁，体验一下。
+龙门石窟只有在天将黑未黑时才是最美的，建议下午去，天亮的时候可以看清佛像，黑的时候开灯真壮观。  
+中间大佛，只有在现场看到才震撼，爬上楼梯，抬头仰望的时候门票90￥它就已经值了，虽然我是半票40￥(😄)  
+<img src="https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoyang-20250826_190904957.webp"/>
+
+<img src="https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoyang-20250826_194815563.webp"/>
+<img src="https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoyang20250826_200802393.webp"/>
+
+路线：景区入口 → 西山石窟→ 过漫水桥 → 东山石窟→ 香山寺→ 白园
+就是从龙门进直走，中途就是大佛，走到头左拐有个桥过去，再直走就出去了  
+差评：门口商业太发达，要走好久才进景点，出去也是，风景没得说，妙中妙，必看  
+一天就结束了，累呀，晚饭回青旅点外卖，实在不知道吃啥好了，我对吃的从来都是能吃就行  
+## 第二天
+全天老君山，这得单独写一篇，东西较多。  
+![](https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoyang-20250827_142149153.webp)
+## 第三天
