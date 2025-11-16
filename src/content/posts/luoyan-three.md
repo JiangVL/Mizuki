@@ -103,6 +103,43 @@ lang: zh-CN
 差评：门口商业太发达，要走好久才进景点，出去也是，风景没得说，妙中妙，必看  
 一天就结束了，累呀，晚饭回青旅点外卖，实在不知道吃啥好了，我对吃的从来都是能吃就行  
 ## 第二天
+### 老君山
 全天老君山，这得单独写一篇，东西较多。  
 ![](https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoyang-20250827_142149153.webp)
 ## 第三天
+景点：洛阳博物馆 西工小吃街 小街天府 洛邑古城 丽景门
+### 洛阳博物馆
+晚上预约了洛阳博物馆，清晨乘坐地铁前往(坐公交更好，地铁得走挺远)  
+![](https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoayng-20250828_104537120.webp)
+洛阳博物馆分为两层，一楼通展，二楼精品展，作为十三朝古都，东西确实多。  
+![](https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoyang-20250828_105712150.webp)
+![](https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoyang-20250828_113501938.webp)
+没钱报团，走马观花似的一路看完，有洛阳变迁史，夏代，战国，北魏，唐三彩等，认识的就这么多，好像还有和敦煌莫高窟联合展还是啥的，要钱，没看  
+有空可以来看看，免费。  
+### 西工小吃街&&小街天府
+看完骑小黄去西工小吃街吃个午饭，小街天府就在小吃街里头，人真的贼多，到饭点。  
+没拍照，西工小吃街对于我这种吃啥都行的来说，吸引力不大，找个店随便吃吃，臊子面，纯瘦肉肉夹馍一共24，还可以。  
+中午吃完回青旅收拾，休息一下。
+### 洛邑古城
+下午程地铁前往洛邑古城  
+![](https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoyang-20250828_180533088.webp)
+![](https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoyang-20250828_181317410.webp)
+没啥好说的，也是吃饭地方，风景还行，由于火车时间，没待太久，什么时间来着好像有天女散花。  
+有个电音啥的节目，20块挺长时间，应该挺有趣的，时间没规划好，没看。  
+![](https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoyang-20250828_182951536.webp)![](https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoyang-20250828_183029748.webp)
+### 丽景门
+就是一个门进去是个长长的小吃街  
+![](https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoyang-20250828_192246013.NIGHT.webp)
+这没啥风景  
+坐公交回去赶火车
+![](https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoyang-20250828_193946285.NIGHT.webp)
+
+## 总结
+
+由于是本人第一次写博文，我平常连400字作文都写不出来，文笔极差，见谅。  
+许多地方的描述很笼统，不全面，因人而异，只有自己去过才知道。  
+洛阳三天，我的规划就是，基本上没规划，路线弯弯绕绕，第一次独自出门独自旅行嘛，给自己涨涨经验，下次更好。  
+#### 附上一张本人照片
+![](https://cdn.jsdelivr.net/gh/JiangVL/blogimages/img/luoyang-me-2025-11-16_10-10-08.webp)
+
+洛阳三天三夜正式结束，敬自己，敬自由

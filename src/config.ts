@@ -22,7 +22,7 @@ const SITE_TIMEZONE =8;//设置你的网站时区 from -12 to 12 default in UTC+
 export const siteConfig: SiteConfig = {
 	title: "晳粊怀文",
 	subtitle: "晳粊之光，独照我心",
-
+	
 	timeZone: SITE_TIMEZONE,
 	
 	lang: SITE_LANG,
