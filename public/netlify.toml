@@ -1,0 +1,24 @@
+[[headers]]
+  # 针对 Twikoo 云函数的路径
+  for = "/.netlify/functions/twikoo" 
+  
+  # 预检请求 (OPTIONS) 所需的标头
+  [headers.values]
+    Access-Control-Allow-Origin = "https://www.zhbi.top" 
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type"
+    
+[[headers]]
+  # 针对本地调试 (如果需要)
+  for = "/.netlify/functions/twikoo"
+  [headers.values]
+    Access-Control-Allow-Origin = "http://localhost:4321"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type"
+[[headers]]
+  for = "/.netlify/functions/twikoo"
+  [headers.values]
+    # 允许所有来源。如果问题解决，再替换为您的具体域名。
+    Access-Control-Allow-Origin = "*" 
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type"
