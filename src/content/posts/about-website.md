@@ -1,6 +1,6 @@
 ---
 title: 关于本站
-published: 2025-11-12
+published: 2025-11-01
 description: About this site
 image: ./cover.jpeg
 tags:
@@ -19,9 +19,12 @@ pinned: true
 **Gemini**提供写作思路及网站取名  
 主域名：**zhbi.top**  
 备域名：**blog.395718.xyz**  
-~~啥，为啥不是zhibi.top，因为买不起~~
 ## 本站内容&&方向
 主要分享个人经历，记录生活。
+## 已知问题
+1. 追番页面缺少加载动画，导致点进去一片空白，等几秒才刷新出来
+2. 页脚网站稳定运行时间桌面端正常显示，移动端时间异常
+3. 文章底部距离上次编辑时间不会更新
 ## 联系方式
 #### 邮箱：fujiemel@outlook.com
 #### Telegram:[Telegram: Launch @JinYiJiang](https://t.me/JinYiJiang)
