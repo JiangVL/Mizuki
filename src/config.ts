@@ -236,6 +236,11 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Anime,
 		LinkPreset.Friends,
 		LinkPreset.About,
+		{
+			name: "开往",
+			url: "https://www.travellings.cn/go.html",
+			icon: "fa6-solid:train-subway",
+		}
 		// 支持自定义导航栏链接,并且支持多级菜单,3.1版本新加
 		// {
 		// 	name: "Links",
