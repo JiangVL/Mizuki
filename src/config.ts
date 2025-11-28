@@ -240,7 +240,7 @@ export const navBarConfig: NavBarConfig = {
 			name: "开往",
 			url: "https://www.travellings.cn/go.html",
 			icon: "fa6-solid:train-subway",
-		}
+		},
 		// 支持自定义导航栏链接,并且支持多级菜单,3.1版本新加
 		// {
 		// 	name: "Links",
@@ -624,4 +624,19 @@ export const umamiConfig = {
 	scripts: `
 <script defer src="https://cloud.umami.is/script.js" data-website-id="e2fd0190-7982-49f3-a604-8884f0053b0b"></script>
   `.trim(), // 上面填你要插入的Script,不用再去Layout中插入
+} as const;
+
+export const baiduAnalyticsConfig = {
+	enabled: true, // 是否启用百度分析
+	scripts: `
+<script>
+ var _hmt = _hmt || [];
+ (function() {
+   var hm = document.createElement("script");
+   hm.src = "https://hm.baidu.com/hm.js?25db81743f1fbd62a9bb347e776661af";
+   var s = document.getElementsByTagName("script")[0];  
+   s.parentNode.insertBefore(hm, s);
+ })();
+</script>
+  `.trim(),
 } as const;
