@@ -16,7 +16,8 @@ pinned: true
 ## 本站简介
 本站使用**Github**托管代码，使用静态托管网站**Vercel**  
 白嫖**Edgeone**免费CDN加速服务  
-**Gemini**提供写作思路及网站取名  
+**Gemini**提供写作思路  
+图床采用**GitHub**+**PicGo**  
 主域名：**zhbi.top**  
 备域名：**blog.395718.xyz**  
 ## 本站内容&&方向
@@ -25,6 +26,7 @@ pinned: true
 1. 追番页面缺少加载动画，导致点进去一片空白，等几秒才刷新出来
 2. 页脚网站稳定运行时间桌面端正常显示，移动端时间异常
 3. 文章底部距离上次编辑时间不会更新
+4. 部分首页图片采用公益api图片，后续再改
 ## 联系方式
 #### 邮箱：fujiemel@outlook.com
 #### Telegram:[Telegram: Launch @JinYiJiang](https://t.me/JinYiJiang)
