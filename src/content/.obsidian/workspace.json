@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/about-website.md",
+                "file": "posts/August-2025-job.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "about-website"
+              "title": "August-2025-job"
             }
           }
         ]
@@ -170,15 +170,15 @@
   },
   "active": "5ae2fd6343ef2536",
   "lastOpenFiles": [
-    "posts/August-2025-job.md",
-    "posts/handan-fantawild.md",
     "posts/laojunshan.md",
+    "posts/handan-fantawild.md",
+    "posts/August-2025-job.md",
+    "posts/about-website.md",
     "posts/luoyan-three.md",
     "posts/memories-past.md",
     "posts/images/yuandan-wanhui-chuanzhi.jpg",
     "posts/images",
     "posts/新建文件夹",
-    "posts/about-website.md",
     "spec/friends.md",
     "spec/about.md",
     "posts/测试.md",
