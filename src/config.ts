@@ -242,6 +242,12 @@ export const navBarConfig: NavBarConfig = {
 			icon: "fa6-solid:train-subway",
 			external: true,
 		},
+		{
+			name: "足迹",
+			url: "/footprint.html",
+			icon: "fa6-solid:route",
+			external: true,
+		},
 		// 支持自定义导航栏链接,并且支持多级菜单,3.1版本新加
 		// {
 		// 	name: "Links",
