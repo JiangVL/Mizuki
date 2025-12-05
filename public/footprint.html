@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的足迹</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.0/dist/echarts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
+    <style>
+        body { 
+            margin: 0; padding: 0; 
+            background: #ffffff; /* 纯白背景 */
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            overflow: hidden;
+            display: flex; flex-direction: column; align-items: center;
+        }
+        
+        .header { position: absolute; top: 20px; z-index: 10; text-align: center; pointer-events: none; }
+        h1 { margin: 0; font-size: 26px; color: #333; letter-spacing: 2px; font-weight: 600; }
+        .subtitle { font-size: 13px; color: #999; margin-top: 6px; }
+        
+        #map-chart { width: 100vw; height: 100vh; }
+        
+        /* 极简风格按钮 */
+        #back-btn { 
+            position: absolute; top: 40px; left: 40px; z-index: 100;
+            background: #fff; color: #409EFF; 
+            border: 1px solid #409EFF; 
+            padding: 8px 22px; border-radius: 20px; cursor: pointer;
+            font-size: 14px; font-weight: bold; display: none;
+            transition: all 0.2s;
+        }
+        #back-btn:hover { 
+            background: #409EFF; color: #fff; 
+            box-shadow: 0 4px 12px rgba(64, 158, 255, 0.3);
+        }
+
+        .loading { 
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            background: rgba(255,255,255,0.9); padding: 12px 24px; border-radius: 4px;
+            border: 1px solid #eee; color: #555; font-size: 14px; pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>我的足迹</h1>
+    <div class="subtitle">极简线条 · 勾勒世界</div>
+</div>
+
+<button id="back-btn" onclick="goBack()"><span>↩</span> 返回上一级</button>
+<div id="loading-text" class="loading">正在读取 footprints.json ...</div>
+<div id="map-chart"></div>
+
+<script>
+    var myChart = echarts.init(document.getElementById('map-chart'), null, {renderer: 'canvas'});
+    var mapStack = [];
+    var myFootprints = []; // 这里不再写死数据，而是等待 fetch 加载
+    
+    // 方案二配色：清爽蓝系
+    var mapColors = ['#E3F2FD', '#BBDEFB', '#90CAF9', '#64B5F6', '#42A5F5'];
+
+    var provincePinyin = {
+        '北京': 'beijing', '天津': 'tianjin', '河北': 'hebei', '山西': 'shanxi', '内蒙古': 'neimenggu',
+        '辽宁': 'liaoning', '吉林': 'jilin', '黑龙江': 'heilongjiang', '上海': 'shanghai', '江苏': 'jiangsu',
+        '浙江': 'zhejiang', '安徽': 'anhui', '福建': 'fujian', '江西': 'jiangxi', '山东': 'shandong',
+        '河南': 'henan', '湖北': 'hubei', '湖南': 'hunan', '广东': 'guangdong', '广西': 'guangxi',
+        '海南': 'hainan', '重庆': 'chongqing', '四川': 'sichuan', '贵州': 'guizhou', '云南': 'yunnan',
+        '西藏': 'xizang', '陕西': 'shaanxi', '甘肃': 'gansu', '青海': 'qinghai', '宁夏': 'ningxia',
+        '新疆': 'xinjiang', '台湾': 'taiwan', '香港': 'xianggang', '澳门': 'aomen'
+    };
+
+    // ============================================================
+    // 核心修改：强制读取外部文件 + 时间戳防缓存
+    // ============================================================
+    // Date().getTime() 会生成当前时间戳，强制浏览器不使用缓存，每次都读最新的 json
+    fetch('./assets/js/footprints.json?t=' + new Date().getTime())
+        .then(res => {
+            if (!res.ok) throw new Error("无法找到 footprints.json 文件");
+            return res.json();
+        })
+        .then(data => {
+            myFootprints = data; // 数据加载成功
+            document.getElementById('loading-text').style.display = 'none';
+            
+            // 初始化状态并渲染
+            window.curName = 'china';
+            window.curLevel = 'country';
+            renderMap('china', 'country');
+        })
+        .catch(err => {
+            document.getElementById('loading-text').innerHTML = 
+                "<span style='color:red'>加载失败</span><br>请确保使用 Live Server 打开";
+            console.error(err);
+        });
+
+
+    // 模糊匹配函数
+    function isSameRegion(name1, name2) {
+        if (!name1 || !name2) return false;
+        var n1 = name1.replace(/(省|市|自治区|特别行政区|自治州|地区|盟|县|区)$/g, "");
+        var n2 = name2.replace(/(省|市|自治区|特别行政区|自治州|地区|盟|县|区)$/g, "");
+        return n1 === n2 || name1.indexOf(n2) > -1 || name2.indexOf(n1) > -1;
+    }
+
+    function renderMap(mapName, level) {
+        var geoJson = echarts.getMap(mapName).geoJson;
+        var features = geoJson.features;
+        var regionCounts = {};
+        var maxVal = 0;
+
+        // 1. 计算区域热力
+        features.forEach(feature => {
+            var mapRegionName = feature.properties.name;
+            var count = 0;
+            myFootprints.forEach(fp => {
+                var match = false;
+                if (level === 'country') {
+                    if (isSameRegion(fp.province, mapRegionName)) match = true;
+                } else if (level === 'province') {
+                    if (isSameRegion(fp.province, window.curName) && isSameRegion(fp.city, mapRegionName)) match = true;
+                    if (['北京','上海','天津','重庆'].includes(window.curName)) {
+                         if (isSameRegion(fp.district, mapRegionName)) match = true;
+                    }
+                } else if (level === 'city') {
+                    if (isSameRegion(fp.city, window.curName) && isSameRegion(fp.district, mapRegionName)) match = true;
+                }
+                if (match) count++;
+            });
+            if (count > 0) {
+                regionCounts[mapRegionName] = count;
+                maxVal = Math.max(maxVal, count);
+            }
+        });
+
+        // 2. 生成地图颜色
+        var mapRegionData = [];
+        for(var name in regionCounts) {
+            var count = regionCounts[name];
+            var colorIdx = Math.min(Math.floor((count / (maxVal || 1)) * (mapColors.length)), mapColors.length - 1);
+            if (count > 0 && colorIdx === 0) colorIdx = 0;
+            
+            mapRegionData.push({
+                name: name,
+                value: count,
+                itemStyle: { areaColor: mapColors[colorIdx] }
+            });
+        }
+
+        // 3. 筛选散点 (适配 coordinate 数组格式)
+        var scatterData = myFootprints.filter(item => {
+            if (level === 'country') return true;
+            if (level === 'province') return isSameRegion(item.province, mapName);
+            if (level === 'city') return isSameRegion(item.city, mapName);
+            return false;
+        }).map(item => {
+            return {
+                name: item.name,
+                value: item.coordinate, // 适配你的 [lng, lat] 格式
+                date: item.date,
+                desc: item.desc
+            };
+        });
+
+        var option = {
+            backgroundColor: 'transparent',
+            tooltip: {
+                trigger: 'item',
+                backgroundColor: 'rgba(255,255,255,0.95)',
+                borderColor: '#409EFF',
+                borderWidth: 1,
+                textStyle: { color: '#333' },
+                formatter: function(params) {
+                    if (params.seriesType === 'scatter') {
+                        var d = params.data;
+                        return `<b>${d.name}</b><br/>${d.date||''}<br/>${d.desc||''}`;
+                    }
+                    return params.name + (params.value ? `<br/>去过 ${params.value} 次` : '');
+                }
+            },
+            geo: {
+                map: mapName,
+                roam: true,
+                zoom: 1.2,
+                scaleLimit: { min: 1, max: 10 },
+                label: {
+                    normal: { show: true, color: '#999', fontSize: 10 },
+                    emphasis: { show: true, color: '#409EFF', fontWeight: 'bold' }
+                },
+                // --- 方案二样式：极简描边 ---
+                itemStyle: {
+                    normal: {
+                        areaColor: '#ffffff',      
+                        borderColor: '#409EFF',    // 品牌蓝边框
+                        borderWidth: 1.2,          
+                        borderType: 'solid',       
+                        shadowColor: 'transparent' // 无阴影
+                    },
+                    emphasis: {
+                        areaColor: '#E6F7FF',      // 悬浮淡蓝
+                        borderColor: '#409EFF',    
+                        borderWidth: 2,
+                        label: { show: true }
+                    }
+                }
+            },
+            series: [
+                {
+                    type: 'map',
+                    geoIndex: 0,
+                    data: mapRegionData,
+                    silent: false
+                },
+                {
+                    name: '足迹',
+                    type: 'scatter',
+                    coordinateSystem: 'geo',
+                    data: scatterData,
+                    symbol: 'pin',
+                    symbolSize: 18,
+                    symbolOffset: [0, -9],
+                    itemStyle: {
+                        color: '#F56C6C', 
+                        shadowBlur: 2,
+                        shadowColor: 'rgba(0,0,0,0.2)'
+                    },
+                    label: {
+                        show: true,
+                        position: 'right',
+                        formatter: '{b}',
+                        color: '#333',
+                        fontSize: 11,
+                        backgroundColor: 'rgba(255,255,255,0.8)',
+                        borderColor: '#409EFF',
+                        borderWidth: 0.5,
+                        borderRadius: 2,
+                        padding: [2, 4],
+                        distance: 5
+                    },
+                    zlevel: 2
+                }
+            ]
+        };
+
+        myChart.setOption(option, true);
+
+        var btn = document.getElementById('back-btn');
+        if (level === 'country') {
+            mapStack = [];
+            btn.style.display = 'none';
+        } else {
+            btn.style.display = 'flex';
+        }
+    }
+
+    myChart.on('click', function(params) {
+        if (params.componentType !== 'geo' && params.seriesType !== 'map') return;
+        var targetName = params.name;
+        
+        if (window.curLevel === 'country') {
+            var pinyin = provincePinyin[targetName];
+            if (pinyin) loadMapAndRender(pinyin, targetName, 'province', null);
+        } else if (window.curLevel === 'province') {
+            var geoJson = echarts.getMap(window.curName).geoJson;
+            var adcode = null;
+            geoJson.features.forEach(f => {
+                if (isSameRegion(f.properties.name, targetName)) {
+                    adcode = f.properties.id || f.properties.adcode;
+                }
+            });
+            if (adcode) loadMapAndRender(adcode, targetName, 'city', adcode);
+        }
+    });
+
+    function loadMapAndRender(code, name, level, adcode) {
+        var loading = document.getElementById('loading-text');
+        loading.style.display = 'block';
+        
+        var url = level === 'province' 
+            ? `https://cdn.jsdelivr.net/npm/echarts@4.9.0/map/json/province/${code}.json`
+            : `https://geo.datav.aliyun.com/areas_v3/bound/geojson?code=${adcode}_full.json`;
+
+        fetch(url).then(res => res.json()).then(geoJson => {
+            loading.style.display = 'none';
+            echarts.registerMap(name, geoJson);
+            
+            mapStack.push({ name: window.curName, level: window.curLevel });
+            window.curName = name;
+            window.curLevel = level;
+            
+            renderMap(name, level);
+        }).catch(e => {
+            loading.style.display = 'none';
+            console.error(e);
+            alert("地图数据加载失败");
+        });
+    }
+
+    function goBack() {
+        if (mapStack.length === 0) return;
+        var last = mapStack.pop();
+        window.curName = last.name;
+        window.curLevel = last.level;
+        renderMap(last.name, last.level);
+    }
+
+    var resizeTimer;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() { myChart.resize(); }, 100);
+    });
+</script>
+</body>
+</html>
