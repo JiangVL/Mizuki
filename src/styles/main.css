@@ -19,7 +19,8 @@
 
 
 
-/* 导入 萝莉体 第二版 字体 */
+/* 以下是原有的中文字体导入，已注释掉 */
+/* 
 @font-face {
 	font-family: "萝莉体 第二版";
 	src: url("/assets/font/萝莉体 第二版.woff2") format("woff2");
@@ -27,6 +28,7 @@
 	font-weight: 400;
 	font-display: swap;
 }
+*/
 
 @tailwind base;
 @tailwind components;

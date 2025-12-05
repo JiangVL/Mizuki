@@ -192,10 +192,16 @@ export const siteConfig: SiteConfig = {
 		},
 		cjkFont: {
 			// 中日韩字体 - 作为回退字体
-			fontFamily: "萝莉体 第二版",
-			fontWeight: "500",
-			localFonts: ["萝莉体 第二版.ttf"],
-			enableCompress: true, // 启用字体子集优化，减少字体文件大小
+			fontFamily:
+				"system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+			fontWeight: "400",
+			localFonts: [],
+			enableCompress: false, // 禁用字体子集优化
+			// 以下是原有的自定义字体配置，已注释掉
+			// fontFamily: "萝莉体 第二版",
+			// fontWeight: "500",
+			// localFonts: ["萝莉体 第二版.ttf"],
+			// enableCompress: true, // 启用字体子集优化，减少字体文件大小
 		},
 	},
 	showLastModified: true, // 控制“上次编辑”卡片显示的开关
@@ -240,12 +246,6 @@ export const navBarConfig: NavBarConfig = {
 			name: "开往",
 			url: "https://www.travellings.cn/go.html",
 			icon: "fa6-solid:train-subway",
-			external: true,
-		},
-		{
-			name: "足迹",
-			url: "/footprint.html",
-			icon: "fa6-solid:route",
 			external: true,
 		},
 		// 支持自定义导航栏链接,并且支持多级菜单,3.1版本新加
