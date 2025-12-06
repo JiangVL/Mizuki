@@ -2,7 +2,7 @@
 title: 往事回忆
 published: 2025-01-01
 description: memories of the past
-image: https://t.alcy.cc/ycy
+image: ./cover.jpeg
 tags:
   - 往事
   - 随笔

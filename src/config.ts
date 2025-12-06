@@ -20,7 +20,7 @@ import { LinkPreset } from "./types/config";
 const SITE_LANG = "zh_CN"; // 语言代码，例如：'en', 'zh_CN', 'ja' 等。
 const SITE_TIMEZONE = 8; //设置你的网站时区 from -12 to 12 default in UTC+8
 export const siteConfig: SiteConfig = {
-	title: "晳粊怀文",
+	title: "晳粊的人生",
 	subtitle: "晳粊之光，独照我心",
 	siteURL: "https://zhbi.top/", // 请替换为你的站点URL，以斜杠结尾
 	siteStartDate: "2025-11-01", // 站点开始运行日期，用于站点统计组件计算运行天数
@@ -135,7 +135,7 @@ export const siteConfig: SiteConfig = {
 
 		homeText: {
 			enable: true, // 在主页显示自定义文本
-			//title: "人生如登高，山川日月在目，而晳粊之光，独照我心", // 主页横幅主标题
+			title: "人生如登高，山川日月在目，而晳粊之光，独照我心", // 主页横幅主标题
 
 			subtitle: [
 				"人生如登高，山川日月在目，而晳粊之光，独照我心",
@@ -386,7 +386,7 @@ export const commentConfig: CommentConfig = {
 
 export const announcementConfig: AnnouncementConfig = {
 	title: "公告栏", // 公告标题
-	content: "开发中,半成品.", // 公告内容
+	content: "文笔很差,就当是人生记事簿吧.", // 公告内容
 	closable: false, // 允许用户关闭公告
 	link: {
 		enable: true, // 启用链接
