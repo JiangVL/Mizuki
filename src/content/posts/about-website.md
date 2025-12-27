@@ -17,8 +17,8 @@ pinned: true
 本站使用**Github**托管代码，使用静态托管网站**Vercel**  
 白嫖**Edgeone**免费CDN加速服务  
 **Gemini**提供写作思路  
-图床采用**GitHub**+**PicGo**+公益CDN  
-使用Obsidian些文章
+图床采用**GitHub**+**PicGo**+**公益CDN**  
+使用Obsidian编写文章  
 主域名：**zhbi.top**  
 备域名：**blog.395718.xyz**  
 ## 本站内容&&方向
