@@ -165,18 +165,23 @@
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": false,
+      "obsidian-livesync:P2P Replicator": false,
+      "obsidian-livesync:Show Log": false,
+      "obsidian-livesync:Replicate": false,
+      "obsidian-livesync:Show Customization sync": false
     }
   },
   "active": "5ae2fd6343ef2536",
   "lastOpenFiles": [
+    "flag_rebuild.md",
+    "spec/about.md",
     "spec/friends.md",
     "posts/2025-1227-Essay.md",
     "posts/2025-1212-Essay.md",
     "posts/about-website.md",
     "posts/August-2025-job.md",
     "posts/handan-fantawild.md",
-    "spec/about.md",
     "posts/laojunshan.md",
     "posts/luoyan-three.md",
     "posts/memories-past.md",
