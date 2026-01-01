@@ -255,6 +255,12 @@ export const navBarConfig: NavBarConfig = {
 			external: true,
 		},
 		{
+			name: "Hexo",
+			url: "https://hexo.zhbi.top",
+			icon: "fa6-solid:right-left",
+			external: true,
+		},
+		{
 			name: "开往",
 			url: "https://www.travellings.cn/go.html",
 			icon: "fa6-solid:train-subway",
